@@ -1,4 +1,39 @@
-/* variables.css */
 :root {
-  --primary-color: #ffffff;
+  --main-bg-color: #FFF5F7;
+  --main-text-color: #444;
+  --nav-footer-bg: #FFF0F5;
+  --highlight-color: #D96C85;
+  --btn-bg-color: #F7C5CC;
+  --cta-light-bg: #fdf0f2;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+footer,
+.topnav {
+  background-color: var(--nav-footer-bg);
+}
+
+button,
+#CV,
+.cta-right a {
+  background-color: var(--btn-bg-color);
+  color: var(--main-text-color);
+}
+
+#result-summary {
+  background-color: var(--cta-light-bg);
+  border: 1px solid var(--highlight-color);
+}
+
+.dark-mode {
+  --main-bg-color: #e404f8;
+  --main-text-color: #f0f0f0;
+  --nav-footer-bg: #e404f8;
+  --highlight-color: #ff7a9a;
+  --btn-bg-color: #f37ed3;
+  --cta-light-bg: #f37ed3;
 }

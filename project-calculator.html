@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Quote Calculator</title>
+  <link rel="stylesheet" href="assets/style/global.css">
+  <link rel="stylesheet" href="assets/style/variables.css">
+  <link rel="stylesheet" href="assets/style/calcualtor.css">
+  <script src="https://kit.fontawesome.com/ac2b298c3e.js" crossorigin="anonymous"></script>
+  <script defer src="services/global.js"></script>
+  <script defer src="services/calculator.js"></script>
 </head>
+
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <header>
+    <nav class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="project-calculator.html" class="active">Project Calculator</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </a>
+      <a href="javascript:void(0);" class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fa-solid fa-sun"></i>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section class="calculator-section">
+      <div class="calculator-container">
+        <h1>Project Calculator</h1>
+
+        <label for="siteType">
+          <i class="fa fa-globe"></i> Site Type
+        </label>
+        <select id="siteType">
+          <option value="">Select an option</option>
+          <option value="Business Site">Business Site</option>
+          <option value="Online Store">Online Store</option>
+          <option value="Blog">Blog</option>
+        </select>
+
+        <label for="pages">
+          <i class="fa fa-file"></i> Number of Pages
+        </label>
+        <select id="pages">
+          <option value="">Select an option</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <div class="custom-design-row">
+          <label>
+            <i class="fa fa-paint-brush"></i> Custom Design
+          </label>
+          <div class="radio-group">
+            <input type="radio" name="design" id="designYes" value="Yes"> Yes
+            <input type="radio" name="design" id="designNo" value="No"> No
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button onclick="resetForm()">Reset</button>
+          <button onclick="calculatePrice()">Calculate Price</button>
+        </div>
+
+        <div id="result-summary">
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Bosmat Erlich. All rights reserved</p>
+  </footer>
 </body>
+
 </html>
